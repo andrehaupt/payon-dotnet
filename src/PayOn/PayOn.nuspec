@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>PayOn</id>
+    <version>1.0.0</version>
+    <title>PAY.ON .NET</title>
+    <authors>AndreHauptfleisch</authors>
+    <owners>AndreHauptfleisch</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/andrehaupt/payon-dotnet</projectUrl>
+    <description>The unofficial PAY.ON .NET library built using .NET Standard.</description>
+    <releaseNotes>Initial public release.</releaseNotes>
+    <copyright>Copyright 2020</copyright>
+    <tags>pay.on payon</tags>
+  </metadata>
+</package>
