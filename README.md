@@ -33,6 +33,12 @@ Create a published release by running:
 dotnet publish src/PayOn/PayOn.csproj -o build/
 ```
 
+# Install
+
+The package is available on [nuget](https://www.nuget.org/packages/PayOn/).
+
+You can install it using the dotnet CLI: `dotnet add package PayOn`
+
 # Usage
 
 Please see the [PayOnClientTests.cs](https://github.com/andrehaupt/payon-dotnet/blob/main/tests/PayOn.Tests/PayOnClientTests.cs) test class for a variety of usage cases.
