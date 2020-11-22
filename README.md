@@ -72,7 +72,7 @@ The project is structured as follows([1](https://github.com/kriasoft/Folder-Stru
 
 ## Changelog
 
-### [1.0.0](https://github.com/andrehaupt/payon-dotnet/tags/1.0.0) - 2020-11-22
+### [1.0.0](https://github.com/andrehaupt/payon-dotnet/releases/tag/1.0.0) - 2020-11-22
 
 First public release.
 
