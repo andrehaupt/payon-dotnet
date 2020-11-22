@@ -82,4 +82,4 @@ MIT License.
 
 ## Authors
 
-- **André Hauptfleisch** - [André Hauptfleisch](https://github.com/andrehaupt)
+- **André Hauptfleisch** - [GitHub Profile](https://github.com/andrehaupt)
