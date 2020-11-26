@@ -16,6 +16,12 @@ namespace PayOn.Examples
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+
+            Settings.BaseUrl = configuration["PayOn:BaseUrl"];
+            Settings.EntityIdThreeDSecure = configuration["PayOn:EntityId:ThreeDSecure"];
+            Settings.EntityIdRecurring = configuration["PayOn:EntityId:Recurring"];
+            Settings.UserId = configuration["PayOn:UserId"];
+            Settings.Password = configuration["PayOn:Password"];
         }
 
         public IConfiguration Configuration { get; }

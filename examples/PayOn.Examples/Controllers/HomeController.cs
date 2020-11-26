@@ -42,7 +42,7 @@ namespace PayOn.Examples.Controllers
         [HttpPost]
         public IActionResult ThreeDSecure(PaymentViewModel model)
         {
-            PayOnClient client = new PayOnClient(Settings.EntityId_3DSecure, Settings.UserId, Settings.Password, Settings.BaseUrl);
+            PayOnClient client = new PayOnClient(Settings.EntityIdThreeDSecure, Settings.UserId, Settings.Password, Settings.BaseUrl);
             ThreeDSecurePaymentRequest request = new ThreeDSecurePaymentRequest
             {
                 PaymentBrand = model.PaymentBrand,
@@ -93,7 +93,7 @@ namespace PayOn.Examples.Controllers
 
         public IActionResult Confirm(string id, string resourcePath)
         {
-            PayOnClient client = new PayOnClient(Settings.EntityId_3DSecure, Settings.UserId, Settings.Password, Settings.BaseUrl);
+            PayOnClient client = new PayOnClient(Settings.EntityIdThreeDSecure, Settings.UserId, Settings.Password, Settings.BaseUrl);
             ThreeDSecurePaymentStatusResponse paymentStatus = client.RequestThreeDSecurePaymentStatus(id);
             PaymentViewModel model = new PaymentViewModel
             {
