@@ -1,6 +1,6 @@
 using System;
 
-namespace PayOn.Example.Models
+namespace PayOn.Examples.Models
 {
     public class ErrorViewModel
     {

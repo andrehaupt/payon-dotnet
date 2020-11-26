@@ -6,7 +6,9 @@ The unofficial PAY.ON .NET library built using .NET Standard.
 
 ## Prerequisites
 
-.NET Core 2.2 is required to build this solution.
+The library is built .NET Standard 2.0.
+
+The examples and test projects requires .NET 5.0.
 
 ## Build
 
@@ -77,6 +79,10 @@ The project is structured as follows([1](https://github.com/kriasoft/Folder-Stru
 [Semantic Versioning 2.0.0](http://semver.org/) is used for this project.
 
 ## Changelog
+
+### [1.1.0](https://github.com/andrehaupt/payon-dotnet/releases/tag/1.1.0) - 2020-11-26
+
+Upgraded to .NET 5.0 and extended the example ASP.NET MVC application.
 
 ### [1.0.0](https://github.com/andrehaupt/payon-dotnet/releases/tag/1.0.0) - 2020-11-22
 
