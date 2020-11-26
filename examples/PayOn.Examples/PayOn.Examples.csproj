@@ -4,4 +4,16 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Remove="wwwroot\lib\jquery-validation\dist\jquery.validate.min.js" />
+    <Content Remove="wwwroot\lib\jquery-validation\dist\additional-methods.js" />
+    <Content Remove="wwwroot\lib\jquery-validation\dist\additional-methods.min.js" />
+    <Content Remove="wwwroot\lib\jquery-validation\LICENSE.md" />
+    <Content Remove="wwwroot\lib\jquery-validation\dist\jquery.validate.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\PayOn\PayOn.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

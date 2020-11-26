@@ -13,6 +13,12 @@ namespace PayOn.Examples
     {
         public static void Main(string[] args)
         {
+            Settings.EntityId_3DSecure = "xxx";
+            Settings.EntityId_Recurring = "xxx";
+            Settings.UserId = "xxx";
+            Settings.Password = "xxx";
+            Settings.BaseUrl = "https://test.oppwa.com";
+
             CreateHostBuilder(args).Build().Run();
         }
 
