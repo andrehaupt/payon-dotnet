@@ -3,3 +3,4 @@
 *.vs
 build
 appsettings.Development.json
+*.nupkg
