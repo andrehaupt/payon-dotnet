@@ -3,22 +3,22 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:58466",
-      "sslPort": 44311
+      "applicationUrl": "http://localhost:29854",
+      "sslPort": 44300
     }
   },
   "profiles": {
-    "PayOn.Example": {
-      "commandName": "Project",
-      "launchBrowser": true,
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      },
-      "applicationUrl": "https://localhost:5001;http://localhost:5000"
-    },
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "PayOn.Examples": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "applicationUrl": "https://localhost:57545;http://localhost:36671",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

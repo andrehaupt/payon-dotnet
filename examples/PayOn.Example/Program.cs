@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
-namespace PayOn.Example
+namespace PayOn.Examples
 {
     public class Program
     {

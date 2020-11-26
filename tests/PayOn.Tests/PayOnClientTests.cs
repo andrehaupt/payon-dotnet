@@ -37,7 +37,7 @@ namespace PayOn.Tests
         public void ThreeDSecurePayment()
         {
             PayOnClient threeDSecureClient = new PayOnClient(EntityId_ThreeDPayment, UserId, Password, BaseUrl, TestMode);
-            CardAccount[] cardAccounts = TestHelper.GetTestPaymentCardAccounts()
+            CardAccount[] cardAccounts = TestData.GetTestPaymentCardAccounts()
                 .Where(x => x.ThreeDSecure)
                 .ToArray();
 
@@ -87,7 +87,7 @@ namespace PayOn.Tests
         {
             PayOnClient threeDSecureClient = new PayOnClient(EntityId_ThreeDPayment, UserId, Password, BaseUrl, TestMode);
             PayOnClient recurringPaymentClient = new PayOnClient(EntityId_Recurring, UserId, Password, BaseUrl, TestMode);
-            CardAccount[] cardAccounts = TestHelper.GetTestPaymentCardAccounts();
+            CardAccount[] cardAccounts = TestData.GetTestPaymentCardAccounts();
 
             foreach (var cardAccount in cardAccounts)
             {
@@ -119,11 +119,11 @@ namespace PayOn.Tests
                 if (response.Result.GetResultStatus() == ResultStatus.Pending)
                 {
                     PaymentStatusResponse paymentResult = RequestPaymentStatus(threeDSecureClient, cardAccount, response.Redirect);
-                    Assert.Equal(paymentResult?.Result?.GetResultStatus(), ResultStatus.Approved);
+                    Assert.Equal(ResultStatus.Approved, paymentResult?.Result?.GetResultStatus());
                 }
                 else
                 {
-                    Assert.Equal(response.Result.GetResultStatus(), ResultStatus.Approved);
+                    Assert.Equal(ResultStatus.Approved, response.Result.GetResultStatus());
                 }
 
                 // Recurring transaction
@@ -142,7 +142,7 @@ namespace PayOn.Tests
                 RegistrationResponse recurringResponse = recurringPaymentClient.RequestRegistration(recurringRequest);
                 Log("Repeat Recurring Registration Response", JsonConvert.SerializeObject(recurringResponse));
 
-                Assert.Equal(recurringResponse.Result.GetResultStatus(), ResultStatus.Approved);
+                Assert.Equal(ResultStatus.Approved, recurringResponse.Result.GetResultStatus());
             }
         }
 
@@ -151,12 +151,12 @@ namespace PayOn.Tests
         {
             PayOnClient threeDSecureClient = new PayOnClient(EntityId_ThreeDPayment, UserId, Password, BaseUrl, TestMode);
             PayOnClient recurringPaymentClient = new PayOnClient(EntityId_Recurring, UserId, Password, BaseUrl, TestMode);
-            CardAccount[] cardAccounts = TestHelper.GetTestPaymentCardAccounts();
+            CardAccount[] cardAccounts = TestData.GetTestPaymentCardAccounts();
 
             foreach (var cardAccount in cardAccounts)
             {
                 int idx = Array.FindIndex(cardAccounts, x => x == cardAccount) + 1;
-                Log($"\nTest card: {idx}/{cardAccounts.Count()}: {cardAccount.Number}");
+                Log($"\nTest card: {idx}/{cardAccounts.Length}: {cardAccount.Number}");
 
                 PaymentRequest request = new PaymentRequest
                 {
@@ -188,12 +188,12 @@ namespace PayOn.Tests
                 if (response.Result.GetResultStatus() == ResultStatus.Pending)
                 {
                     PaymentStatusResponse paymentResult = RequestPaymentStatus(threeDSecureClient, cardAccount, response.Redirect);
-                    Assert.Equal(paymentResult?.Result?.GetResultStatus(), ResultStatus.Approved);
+                    Assert.Equal(ResultStatus.Approved, paymentResult?.Result?.GetResultStatus());
                     id = paymentResult.Id;
                 }
                 else
                 {
-                    Assert.Equal(response.Result.GetResultStatus(), ResultStatus.Approved);
+                    Assert.Equal(ResultStatus.Approved, response.Result.GetResultStatus());
                 }
 
                 // Recurring transaction
@@ -206,7 +206,7 @@ namespace PayOn.Tests
                 PaymentResponse recurringResponse = threeDSecureClient.RequestPaymentReversal(id);
                 Log("Payment Reversal Response", JsonConvert.SerializeObject(recurringResponse));
 
-                Assert.Equal(recurringResponse.Result.GetResultStatus(), ResultStatus.Approved);
+                Assert.Equal(ResultStatus.Approved, recurringResponse.Result.GetResultStatus());
             }
         }
 

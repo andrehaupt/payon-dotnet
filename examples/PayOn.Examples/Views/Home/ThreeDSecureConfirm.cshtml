@@ -1,0 +1,32 @@
+﻿@model PayOn.Examples.Models.PaymentViewModel
+
+@{
+    ViewData["Title"] = "Payment Confirmation";
+}
+<h1>3D Secure Payment Result</h1>
+<p>The 3D Secure payment status below.</p>
+<p>Result Status: @Model.Status</p>
+<br />
+<br />
+<h1>Reverse Payment</h1>
+<p>Reverse the repeat recurring payment.</p>
+@using (Html.BeginForm("Reverse", "Home", FormMethod.Post))
+{
+    <table cellpadding="0" cellspacing="0">
+        <tr>
+            <th colspan="2" align="center">Payment Details</th>
+        </tr>
+        <tr>
+            <td>Id: </td>
+            <td>
+                @Html.TextBoxFor(m => m.Id)
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Reverse" /></td>
+        </tr>
+    </table>
+}
+<br />
+<br />

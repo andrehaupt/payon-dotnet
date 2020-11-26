@@ -3,7 +3,7 @@ using PayOn.Models;
 
 namespace PayOn.Tests
 {
-    public static class TestHelper
+    public static class TestData
     {
         public static DateTime FutureDate = DateTime.Now.AddYears(1);
 

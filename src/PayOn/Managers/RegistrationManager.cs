@@ -8,7 +8,6 @@ namespace PayOn.Managers
     {
         private const string RegistrationPath = "/v1/registrations";
         private const string RegistrationPaymentsPath = "/v1/registrations/{0}/payments";
-        private readonly ILogger _logger;
         private readonly string _testMode;
 
         internal RegistrationManager(string baseUrl, string entityId, Authentication authentication, string testMode, ILogger logger) : 
