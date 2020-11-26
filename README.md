@@ -6,7 +6,9 @@ The unofficial PAY.ON .NET library built using .NET Standard.
 
 ## Prerequisites
 
-.NET Core 2.2 is required to build this solution.
+The library is built .NET Standard 2.0.
+
+The examples and test projects requires .NET 5.0.
 
 ## Build
 
