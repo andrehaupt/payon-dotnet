@@ -86,5 +86,11 @@ namespace PayOn.Core
             clone.Card?.Mask();
             return clone;
         }
+        
+        public static string ToDecimalString(this int value)
+        {
+            return ((decimal) value / 100)
+                .ToString("N2");
+        }
     }
 }
