@@ -72,7 +72,7 @@ The project is structured as follows([1](https://github.com/kriasoft/Folder-Stru
     └── README.md
 
 > Use short lowercase names for top-level files and folders except:
-> `LICENSE`, `README.md`
+> `LICENSE`, `README.md`, `CHANGELOG.md`, etc.
 
 ## Versioning
 
